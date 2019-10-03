@@ -471,7 +471,7 @@ static void HPAddDevice(struct udev_device *dev)
 		sInterfaceName = udev_device_get_sysattr_value(dev, "interface");
 
 	if (Add_Serial_In_Name)
-		sSerialNumber = udev_device_get_sysattr_value(parent, "serial");
+		sSerialNumber = udev_device_get_sysattr_value(parent, "devpath");
 
 	/* name from the Info.plist file */
 	fullname = strdup(driver->readerName);
